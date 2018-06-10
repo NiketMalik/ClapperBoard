@@ -1,0 +1,28 @@
+{
+  "name": "ClapperBoard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-loadable": "^5.3.1",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "cross-env NODE_PATH=src/ react-scripts start",
+    "start": "node loader start",
+    "build-js": "cross-env NODE_PATH=src/ react-scripts build",
+    "build": "node loader build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.6"
+  }
+}
